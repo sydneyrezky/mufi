@@ -16,6 +16,12 @@
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
 
+<!--   <script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+  </script> -->
+
 </head>
 
 <body>
@@ -62,13 +68,35 @@
       </li>
       <li class="breadcrumb-item active">Photo</li>
     </ol>
-
+    <!-- Card Project -->
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-         
+          
+          <!--  trigger modal -->
+        <img src="pict/raisa5.jpg" class="card-img-top" data-toggle="modal" data-target="#exampleModalCenter">
+          
+          <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="           exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content carousel" data-ride="carousel">
+               
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+                      <img src="pict/raisa5.jpg">
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1">s</li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2">d</li>
+                  </ol>
+            </div>
+             </div>
+              </div>
+        
+      
 
-          <img class="card-img-top" src="https://res.cloudinary.com/dyg97su8a/image/upload/v1596548925/sample.jpg">
+        
+
+    
          
 
 
@@ -77,6 +105,7 @@
               <a href="#">Project One</a>
             </h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+
           </div>
         </div>
       </div>
@@ -176,6 +205,16 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+      $(function() {
+        // Test to show that the carousel doesn't slide when the current tab isn't visible
+        $('#carousel-example-generic').on('slid.bs.carousel', function(event) {
+          console.log('slid at ', event.timeStamp)
+        })
+      })
+    </script>
+
 
 </body>
 

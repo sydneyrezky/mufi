@@ -10322,6 +10322,17 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 
+  .sosmed {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+
+
+  }
+
+  .sosmed{
+    
+  }
 
   
 }
